@@ -1,5 +1,3 @@
 # Instructions
+En este ejercicio se exploran metodologias de imputacion de datos faltantes. En el primer ejercicio se utiliza la media y en el segundo el metodo de regresion lineal a partir de lo Y predichos.
 
-Include here a short paragraph (less than 70 words) explaining what you 
-learned of the two chosen methods. The purpose is just to reflect on what
-you did. 
