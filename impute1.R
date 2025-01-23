@@ -22,5 +22,12 @@ db <- as_tibble(df) ## from dataframe to tibble
 db <- db  %>%
   mutate(y_salary_m =y_salary_m/1000000 )
 
+# Median
 db <- db  %>%
   mutate(ingtot = ifelse(is.na(y_salary_m) == TRUE, median(db$y_salary_m, na.rm = TRUE) , y_salary_m))
+
+# Mode 
+mode_edu <- as.numeric(names(sort(table(db$maxEducLevel), decreasing = TRUE)[1]))
+
+db <- db  %>%
+  mutate(maxEducLevel = ifelse(is.na(maxEducLevel) == TRUE, mode_edu , maxEducLevel))
