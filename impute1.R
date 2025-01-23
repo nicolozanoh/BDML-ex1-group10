@@ -18,7 +18,9 @@ df <- import("https://github.com/ignaciomsarmiento/datasets/blob/main/GEIH_sampl
 db <- as_tibble(df) ## from dataframe to tibble
 
 
-
+# total income in millions
+db <- db  %>%
+  mutate(y_salary_m =y_salary_m/1000000 )
 
 db <- db  %>%
-  mutate(ingtot = ifelse(is.na(ingtot) == TRUE, median(db$ingtot, na.rm = TRUE) , ingtot))
+  mutate(ingtot = ifelse(is.na(y_salary_m) == TRUE, median(db$y_salary_m, na.rm = TRUE) , y_salary_m))
