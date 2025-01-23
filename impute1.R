@@ -18,9 +18,6 @@ df <- import("https://github.com/ignaciomsarmiento/datasets/blob/main/GEIH_sampl
 db <- as_tibble(df) ## from dataframe to tibble
 
 
-# total income in millions
-db <- db  %>%
-  mutate(y_salary_m =y_salary_m/1000000 )
 
 # Median
 db <- db  %>%
